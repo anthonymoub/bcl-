@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Physical data — content area
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body{margin:0;background:#F6F7F9}
+a{color:#1D4ED8}a:hover{color:#1E3A8A}
+  </style>
+ </head>
+ <body>
+  <!-- Main content area only. The app header and left nav are intentionally NOT included: do not build or change them. -->
+  <div style="background: #F6F7F9; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; color: #111827; display: flex">
+   <main style="flex: 999 1 560px; min-width: 0; padding: 28px 36px 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 20px">
+    <header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+     <div style="display: flex; flex-direction: column; gap: 6px; min-width: 0; flex: 1 1 520px">
+      <p style="margin: 0; font-size: 13px; color: #6B7280">
+       Source › Physical data
+      </p>
+      <h1 style="margin: 0; font-size: 28px; line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">
+       Physical data
+      </h1>
+      <p style="margin: 0; font-size: 14px; color: #4B5563; max-width: 760px">
+       A profile card per column: completeness, nulls, distinct values, uniqueness, top values and a suggested role.
+      </p>
+     </div>
+     <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+      <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+       <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+        <path d="M12 16V4">
+        </path>
+        <path d="M6 10l6-6 6 6">
+        </path>
+        <path d="M4 20h16">
+        </path>
+       </svg>
+       Upload DDL
+      </button>
+      <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+       <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+        <path d="M9 8l-4 4 4 4">
+        </path>
+        <path d="M15 8l4 4-4 4">
+        </path>
+       </svg>
+       View DDL
+      </button>
+     </div>
+    </header>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 16px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 10px">
+     <span style="display: inline-flex; width: 32px; height: 32px; border-radius: 8px; background: #F3F4F6; align-items: center; justify-content: center; color: #111827">
+      <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+       <rect height="14" rx="2" width="16" x="4" y="5">
+       </rect>
+       <path d="M4 10h16">
+       </path>
+       <path d="M10 10v9">
+       </path>
+      </svg>
+     </span>
+     <div style="min-width: 0; flex: 1 1 320px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 14px; font-weight: 600; word-break: break-all">
+       CUSTOMER_ORDERS_MV
+      </p>
+      <p style="margin: 2px 0 0; font-size: 12px; color: #4B5563">
+       Customer order details · Sample Source: Operational Zone › sample-project.SALES_VIEWS
+      </p>
+     </div>
+     <a href="#" style="font-size: 13px; font-weight: 600">
+      Change table
+     </a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+     <div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; min-width: 0">
+      <p style="margin: 0; font-size: 13px; color: #4B5563; font-weight: 500">
+       Rows profiled
+      </p>
+      <p style="margin: 0; font-size: 28px; line-height: 1.1; font-weight: 700; color: #111827; font-variant-numeric: tabular-nums; letter-spacing: -0.01em">
+       1,250,000
+      </p>
+      <p style="margin: 0; font-size: 12px; color: #6B7280">
+       100% of dataset
+      </p>
+     </div>
+     <div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; min-width: 0">
+      <p style="margin: 0; font-size: 13px; color: #4B5563; font-weight: 500">
+       Columns profiled
+      </p>
+      <p style="margin: 0; font-size: 28px; line-height: 1.1; font-weight: 700; color: #111827; font-variant-numeric: tabular-nums; letter-spacing: -0.01em">
+       24
+      </p>
+      <p style="margin: 0; font-size: 12px; color: #6B7280">
+       Full physical schema
+      </p>
+     </div>
+     <div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; min-width: 0">
+      <p style="margin: 0; font-size: 13px; color: #4B5563; font-weight: 500">
+       Fully populated
+      </p>
+      <p style="margin: 0; font-size: 28px; line-height: 1.1; font-weight: 700; color: #111827; font-variant-numeric: tabular-nums; letter-spacing: -0.01em">
+       5
+       <span style="font-size: 16px; color: #6B7280; font-weight: 600">
+        (21%)
+       </span>
+      </p>
+      <p style="margin: 0; font-size: 12px; color: #6B7280">
+       Columns with zero nulls
+      </p>
+     </div>
+     <div style="display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; min-width: 0">
+      <p style="margin: 0; font-size: 13px; color: #4B5563; font-weight: 500">
+       High cardinality
+      </p>
+      <p style="margin: 0; font-size: 28px; line-height: 1.1; font-weight: 700; color: #111827; font-variant-numeric: tabular-nums; letter-spacing: -0.01em">
+       7
+      </p>
+      <p style="margin: 0; font-size: 12px; color: #6B7280">
+       &gt;10k distinct · IDs, names, dates
+      </p>
+     </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+     <div style="position: relative; width: 320px; min-width: 200px">
+      <label for="pd-s" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">
+       Search columns, patterns, values
+      </label>
+      <span style="position: absolute; left: 12px; top: 12px; color: #6B7280">
+       <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+        <circle cx="11" cy="11" r="6.5">
+        </circle>
+        <path d="M20 20l-4-4">
+        </path>
+       </svg>
+      </span>
+      <input id="pd-s" placeholder="Search columns, patterns, values" style="width: 100%; height: 40px; padding: 0 12px 0 36px; border: 1px solid #D1D5DB; border-radius: 8px; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 13px; color: #111827; box-sizing: border-box; background: #FFFFFF" type="search"/>
+     </div>
+     <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+      <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+       <path d="M4 5h16l-6 8v5l-4 2v-7z">
+       </path>
+      </svg>
+      Sort: Completeness
+     </button>
+     <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+      <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+       <path d="M4 5h16l-6 8v5l-4 2v-7z">
+       </path>
+      </svg>
+      Role: All
+     </button>
+     <span style="margin-left: auto; font-size: 13px; color: #4B5563">
+      6 of 24 columns
+     </span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px">
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         ORDER_ID
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         STRING
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #DBEAFE; color: #1E40AF; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Identifier
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 100.0%; height: 6px; background: #16A34A">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         100.0%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         0
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         1,250,000
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         100.0%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          ORD-100231
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          ORD-100232
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          ORD-100233
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         CUSTOMER_ID
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         STRING
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #DBEAFE; color: #1E40AF; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Identifier
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 99.9%; height: 6px; background: #16A34A">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         99.9%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         1,250
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         214,300
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         17.2%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          CUST-20417
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          0.4%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          CUST-11802
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          0.3%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          CUST-09155
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          0.3%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         PRODUCT_ID
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         STRING
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #DBEAFE; color: #1E40AF; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Identifier
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 95.0%; height: 6px; background: #65A30D">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         95.0%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         62,500
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         8,420
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         0.71%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          PRD-0042
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 3.1%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          3.1%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          PRD-0007
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2.8%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          2.8%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          PRD-0193
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2.2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          2.2%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         ORDER_PLACED_TS
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         TIMESTAMP
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #CCFBF1; color: #0F766E; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Timestamp
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 99.2%; height: 6px; background: #16A34A">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         99.2%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         9,800
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         1,102,450
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         88.9%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          2026-11-01 09:14
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          2026-11-01 09:15
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          2026-11-01 09:17
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         ORDER_STATUS
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         STRING
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #FEF3C7; color: #92400E; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Code
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 100.0%; height: 6px; background: #16A34A">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         100.0%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         0
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         5
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         0.00%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          SHIPPED
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 61.8%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          61.8%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          DELIVERED
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 22.4%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          22.4%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          PENDING
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 9.3%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          9.3%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+     <article style="background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 14px; min-width: 0">
+      <div style="display: flex; align-items: flex-start; gap: 8px; justify-content: space-between">
+       <div style="min-width: 0">
+        <p style="margin: 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; font-weight: 600; word-break: break-all">
+         IS_PRIORITY_F
+        </p>
+        <p style="margin: 2px 0 0; font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; color: #4B5563">
+         STRING
+        </p>
+       </div>
+       <span style="display: inline-flex; align-items: center; gap: 6px; height: 24px; padding: 0 10px; border-radius: 999px; background: #F3E8FF; color: #6B21A8; font-size: 12px; font-weight: 600; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; white-space: nowrap">
+        Flag
+       </span>
+      </div>
+      <div>
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        COMPLETENESS
+       </p>
+       <div style="display: flex; align-items: center; gap: 10px; min-width: 150px">
+        <div style="flex: 1; height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+         <div style="width: 99.9%; height: 6px; background: #16A34A">
+         </div>
+        </div>
+        <span style="font-size: 12px; color: #4B5563; font-variant-numeric: tabular-nums; width: 44px; text-align: right">
+         99.9%
+        </span>
+       </div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         NULLS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         1,250
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         DISTINCT
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         2
+        </p>
+       </div>
+       <div>
+        <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+         UNIQUENESS
+        </p>
+        <p style="margin: 2px 0 0; font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums">
+         0.00%
+        </p>
+       </div>
+      </div>
+      <div style="border-top: 1px solid #F1F2F4; padding-top: 10px">
+       <p style="margin: 0 0 4px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; color: #4B5563">
+        TOP VALUES
+       </p>
+       <ul style="list-style: none; margin: 0; padding: 0">
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          N
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 81.2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          81.2%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          Y
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 18.7%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          18.7%
+         </span>
+        </li>
+        <li style="display: grid; grid-template-columns: 1fr 90px 44px; align-items: center; gap: 8px; padding: 4px 0">
+         <span style="font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: #111827">
+          NULL
+         </span>
+         <span style="height: 6px; border-radius: 999px; background: #F3F4F6; overflow: hidden">
+          <span style="display: block; width: 2%; height: 6px; background: #9CA3AF">
+          </span>
+         </span>
+         <span style="font-size: 11px; color: #4B5563; text-align: right">
+          &lt;0.1%
+         </span>
+        </li>
+       </ul>
+      </div>
+     </article>
+    </div>
+    <div style="display: flex; justify-content: center">
+     <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+      Show all 24 columns
+     </button>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 0 0; border-top: 1px solid #E5E7EB; margin-top: auto">
+     <div>
+      <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; border: 1px solid #D1D5DB; border-radius: 8px; background: #FFFFFF; color: #111827; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+       Back
+      </button>
+     </div>
+     <span style="font-size: 13px; color: #4B5563">
+      Step 3 of 5
+     </span>
+     <button style="display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 18px; border: 0; border-radius: 8px; background: #B3121B; color: #FFFFFF; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap" type="button">
+      Continue to Ontology
+      <svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" style="flex: none" viewbox="0 0 24 24" width="16">
+       <path d="M5 12h14">
+       </path>
+       <path d="M13 6l6 6-6 6">
+       </path>
+      </svg>
+     </button>
+    </div>
+   </main>
+  </div>
+ </body>
+</html>
