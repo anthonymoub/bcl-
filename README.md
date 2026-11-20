@@ -2,6 +2,15 @@
 
 This folder contains the approved design for the five **Source** pages of the app. All names, tables, columns and numbers in it are **fictional sample data** (a retail-orders example). Use them only to understand layout and behavior. Never hard-code them.
 
+## How to use this design (read first)
+
+**This is a visual redesign of pages that already exist and already work. It is not a spec to rebuild them from scratch.**
+
+1. **Keep all existing functionality.** Every feature, action, filter, data source and behavior the current Source pages have today must keep working. Restyle and re-lay them out to match the design; do not remove or rewrite them.
+2. **Design shows something the app doesn't do yet?** Skip it, or leave a clearly marked placeholder, and list it in your summary. Do not build new functionality just to match the mockup.
+3. **App has something the design doesn't show?** Keep it, and style it in the same visual language (colors, type, spacing, components in `DESIGN_SPEC.md`).
+4. **Use the HTML as styling and layout guidance, not as code to paste in.** Wire the design into the app's existing components, state, routing and data. All values in the screens are mock data. Replace them with the real data the app already loads.
+
 ## What's here
 
 | Path | What it is |
